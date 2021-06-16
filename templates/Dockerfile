@@ -1,8 +1,6 @@
-FROM ubuntu:14.04
-MAINTAINER Till Toenshoff <@ttoenshoff>
-
-ARG DEBIAN_FRONTEND=noninteractive
-
+FROM centos:7
+MAINTAINER oassaghir
+LABEL Remarks="This is a dockerfile example for Centos system"
 ADD krb5.conf /etc/krb5.conf
 
 RUN echo package heimdal/realm string REALM | debconf-set-selections
